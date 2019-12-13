@@ -1,4 +1,4 @@
-#**Conta Notas**
+#**Conta Notas**\n
   Este programa foi desenvolvido com o objetivo de auxiliar o usuário no fechamento de caixa.
   Seu funcionamento básico consiste em receber a quantidade de notas e valores em cartão contidos no caixa no momento do seu encerramento, bem como a descrição de outros valores, provenientes do Ifood. Com essas informações o programa faz os cálculos necessários e gera arquivos .txt com as informações dos valores do dia.
   O programa também possuí uma calculadora integrada ao seu sistema, a qual traz ao usuário mais comodidate, permitindo-o realizar operações matemáticas sem sair do ambiente do programa.
