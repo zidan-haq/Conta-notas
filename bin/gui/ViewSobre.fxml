@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewAjudaController">
+   <children>
+      <TextArea editable="false" layoutX="15.0" layoutY="28.0" prefHeight="290.0" prefWidth="670.0" text="&#10;   Conta notas é um programa desenvolvido especificamente para auxiliar no fechamento de caixa.&#10;   Seu funcionamento básico consiste em receber a quantidade de notas e valores em cartão &#10;contidos no caixa no momento do seu encerramento, bem como a descrição de outros valores, &#10;provenientes do Ifood. Com essas informações o programa faz os cálculos necessários e gera &#10;arquivos .txt com as informações dos valores do dia.&#10;  O programa também possuí uma calculadora integrada ao seu sistema, a qual traz ao usuário &#10;mais comodidate, permitindo-o realizar operações matemáticas sem sair do ambiente do &#10;programa.&#10;   Ele possuí suporte a impressão e fornece a possibilidade de escolha da impressora &#10;padrão.&#10;&#10;  Conta notas é um software livre e gratuito que pode ser baixado no link:&#10;  www.github.com/zidan-haq/Conta-notas&#10;&#10;  Sinta-se livre para utilizar e/ou editar \o/ " AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+      <Label layoutX="15.0" layoutY="316.0" text="Desenvolvido por: " />
+      <Label layoutX="137.0" layoutY="316.0" onDragDetected="#linkGitHub" onMouseClicked="#linkGitHub" text="Zidan Araujo Haq" textFill="#f21919" underline="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:id="hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewPrincipalController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="95.0">
+         <children>
+            <Pane fx:id="paneLoja" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="loja" fitHeight="59.0" fitWidth="67.0" layoutX="14.0" layoutY="6.0" onMouseClicked="#onLojaAction" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+               </padding>
+            </Pane>
+            <Pane fx:id="paneIfood" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="ifood" fitHeight="59.0" fitWidth="67.0" layoutX="14.0" layoutY="6.0" onMouseClicked="#onIfoodAction" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+               </padding></Pane>
+            <Pane fx:id="paneRelatorio" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="relatorio" fitHeight="59.0" fitWidth="67.0" layoutX="14.0" layoutY="6.0" onMouseClicked="#onRelatorioAction" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+               </padding>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" />
+            <Pane fx:id="paneAjuda" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="ajuda" fitHeight="59.0" fitWidth="67.0" layoutX="14.0" layoutY="7.0" onMouseClicked="#onAjudaAction" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+               </padding>
+            </Pane>
+            <Pane fx:id="paneConfiguracao" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="configuracao" fitHeight="59.0" fitWidth="67.0" layoutX="14.0" layoutY="7.0" onMouseClicked="#onConfiguracaoAction" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+               </padding>
+            </Pane>
+            <Pane fx:id="paneSair" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="sair" fitHeight="59.0" fitWidth="67.0" layoutX="14.0" layoutY="7.0" onMouseClicked="#onSairAction" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Pane>
+         </children>
+         <HBox.margin>
+            <Insets left="-1.0" />
+         </HBox.margin>
+      </VBox>
+      <AnchorPane prefHeight="570.0" prefWidth="700.0">
+         <children>
+            <ImageView fitHeight="366.0" fitWidth="400.0" layoutX="167.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ContaNotas.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

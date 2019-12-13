@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewLojaController">
+   <children>
+      <TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0">
+         <tabs>
+            <Tab text="Dinheiro">
+               <content>
+                  <AnchorPane prefHeight="570.0" prefWidth="700.0">
+                     <children>
+                        <GridPane alignment="CENTER_RIGHT" layoutX="62.0" layoutY="35.0" prefHeight="378.0" prefWidth="226.0" AnchorPane.leftAnchor="62.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="52.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" prefWidth="59.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="71.0" minWidth="10.0" prefWidth="52.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="100 =" GridPane.rowIndex="1" />
+                              <Label text="50 =" GridPane.rowIndex="2" />
+                              <Label text="20 =" GridPane.rowIndex="3" />
+                              <Label text="10 =" GridPane.rowIndex="4" />
+                              <Label text="5 =" GridPane.rowIndex="5" />
+                              <Label text="0,50 =" GridPane.rowIndex="8" />
+                              <Label text="1 =" GridPane.rowIndex="7" />
+                              <Label text="2 =" GridPane.rowIndex="6" />
+                              <Label text="0,25 =" GridPane.rowIndex="9" />
+                              <Label text="0,10 =" GridPane.rowIndex="10" />
+                              <Label text="0,05 =" GridPane.rowIndex="11" />
+                              <TextField fx:id="cem" alignment="CENTER" onMouseClicked="#somar" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="cinquenta" alignment="CENTER" onMouseClicked="#somar" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="vinte" alignment="CENTER" onMouseClicked="#somar" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="dez" alignment="CENTER" onMouseClicked="#somar" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="cinco" alignment="CENTER" onMouseClicked="#somar" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="dois" alignment="CENTER" onMouseClicked="#somar" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField fx:id="um" alignment="CENTER" onMouseClicked="#somar" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField fx:id="cinquentaCents" alignment="CENTER" onMouseClicked="#somar" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <TextField fx:id="vinteECinco" alignment="CENTER" onMouseClicked="#somar" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <TextField fx:id="dezCents" alignment="CENTER" onMouseClicked="#somar" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                              <TextField fx:id="cincoCents" alignment="CENTER" onMouseClicked="#somar" prefWidth="63.0" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                              <Label fx:id="somacem" alignment="CENTER" contentDisplay="CENTER" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label fx:id="somacinquenta" alignment="CENTER" contentDisplay="CENTER" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label fx:id="somavinte" alignment="CENTER" contentDisplay="CENTER" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label fx:id="somadez" alignment="CENTER" contentDisplay="CENTER" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Label fx:id="somacinco" alignment="CENTER" contentDisplay="CENTER" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <Label fx:id="somadois" alignment="CENTER" contentDisplay="CENTER" text="0.00" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <Label fx:id="somaum" alignment="CENTER" contentDisplay="CENTER" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <Label fx:id="somacinquentaCents" alignment="CENTER" contentDisplay="CENTER" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                              <Label fx:id="somavinteECinco" alignment="CENTER" contentDisplay="CENTER" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                              <Label fx:id="somadezCents" alignment="CENTER" contentDisplay="CENTER" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                              <Label fx:id="somacincoCents" alignment="CENTER" contentDisplay="CENTER" text="0.00" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="58.0" text="Nota" textAlignment="CENTER" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="Quant." GridPane.columnIndex="1" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="72.0" text="Total" GridPane.columnIndex="2" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </GridPane>
+                        <AnchorPane layoutX="384.0" layoutY="167.0" AnchorPane.leftAnchor="384.0">
+                           <children>
+                              <TextField fx:id="outrosValores" alignment="CENTER" layoutX="113.0380859375" layoutY="29.0" onMouseClicked="#somar" prefWidth="97.0" style="-fx-border-color: black;" text="0" />
+                              <TextField fx:id="caixaAnterior" alignment="CENTER" layoutX="113.0380859375" layoutY="64.0" onMouseClicked="#somar" prefWidth="97.0" style="-fx-border-color: black;" text="0" />
+                              <Text fill="GREEN" layoutX="220.0380859375" layoutY="50.65087890625" onMouseClicked="#mostrarCalculadora" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="GREEN" layoutX="219.0380859375" layoutY="85.65087890625" onMouseClicked="#procurarCaixaAnterior" strokeType="OUTSIDE" strokeWidth="0.0" text="+">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Text>
+                              <Label layoutX="0.0380859375" layoutY="35.0" text="Outros valores =" />
+                              <Label layoutX="2.0" layoutY="70.0" text="Caixa anterior =" />
+                              <Label layoutY="99.0" text="Total em dinheiro = " />
+                              <Label fx:id="totalEmDinheiro" layoutX="134.0" layoutY="99.0" text="0.00" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="95.0" layoutY="433.0" text="Total em caixa =" />
+                        <Label fx:id="totalEmCaixa" layoutX="209.0" layoutY="433.0" text="0.00" />
+                        <Button mnemonicParsing="false" onAction="#mudarParaTabCartao" style="-fx-background-color: black;" text="Adicionar Cartao &gt;" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Cartão">
+               <content>
+                  <AnchorPane prefHeight="570.0" prefWidth="700.0">
+                     <children>
+                        <TextField fx:id="credito" alignment="CENTER" layoutX="63.0" layoutY="62.0" onMouseClicked="#somar" prefHeight="28.0" prefWidth="108.0" style="-fx-border-color: black;" text="0" />
+                        <TextField fx:id="debito" alignment="CENTER" layoutX="170.0" layoutY="62.0" onMouseClicked="#somar" prefHeight="28.0" prefWidth="108.0" style="-fx-border-color: black;" text="0" />
+                        <Button layoutX="277.0" layoutY="62.0" mnemonicParsing="false" onAction="#adicionarCartao" prefHeight="28.0" prefWidth="89.0" style="-fx-background-color: black;" text="Adicionar" textFill="WHITE" />
+                        <VBox layoutX="468.0" layoutY="177.0" spacing="20.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label text="Total Credito = " />
+                                    <Label fx:id="totalCredito" text="0.00" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Total Debito = " />
+                                    <Label fx:id="totalDebito" text="0.00" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label text="Total em cartao = " />
+                                    <Label fx:id="totalEmCartao" text="0.00" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Label alignment="CENTER" layoutX="63.0" layoutY="45.0" prefHeight="16.0" prefWidth="108.0" style="-fx-border-color: black; -fx-background-color: white;" text="Credito" textAlignment="CENTER" />
+                        <Label alignment="CENTER" layoutX="170.0" layoutY="45.0" prefHeight="16.0" prefWidth="108.0" style="-fx-border-color: black; -fx-background-color: white;" text="Debito" textAlignment="CENTER" />
+                        <Label alignment="CENTER" layoutX="277.0" layoutY="45.0" prefHeight="18.0" prefWidth="89.0" style="-fx-border-color: black; -fx-background-color: white;" text="Opçao" textAlignment="CENTER" />
+                        <TableView fx:id="tableViewCartoes" layoutX="12.0" layoutY="98.0" prefHeight="274.0" prefWidth="307.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="62.0">
+                           <columns>
+                              <TableColumn fx:id="tableColumnDescontar" prefWidth="46.0" resizable="false" text="Desc." />
+                              <TableColumn fx:id="tableColumnCredito" prefWidth="67.0" resizable="false" text="Crédito" />
+                              <TableColumn fx:id="tableColumnDebito" prefWidth="67.0" resizable="false" text="Débito" />
+                              <TableColumn fx:id="tableColumnTotal" prefWidth="67.0" resizable="false" text="Total" />
+                              <TableColumn fx:id="tableColumnExcluir" prefWidth="56.0" resizable="false" sortable="false" text="Excluir" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <AnchorPane layoutX="62.0" layoutY="382.0">
+                           <children>
+                              <HBox layoutY="16.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="144.0" text="Descontar amanha = " />
+                                    <TextField fx:id="descontarCreditoAmanha" alignment="CENTER" prefWidth="85.0" style="-fx-border-color: black;" text="0" />
+                                    <TextField fx:id="descontarDebitoAmanha" alignment="CENTER" prefWidth="85.0" style="-fx-border-color: black;" text="0" />
+                                 </children>
+                              </HBox>
+                              <Label layoutX="162.0" text="Credito" />
+                              <Label layoutX="249.0" text="Debito" />
+                           </children>
+                        </AnchorPane>
+                        <HBox layoutX="560.0" layoutY="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <children>
+                              <Label text="Total do dia = " textFill="RED" />
+                              <Label fx:id="totalDoDia" text="0.00" textFill="RED" />
+                           </children>
+                        </HBox>
+                        <AnchorPane layoutX="62.0" layoutY="445.0">
+                           <children>
+                              <HBox layoutY="16.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="119.0" text="Descontar hoje = " />
+                                    <TextField fx:id="descontarCreditoHoje" alignment="CENTER" onMouseClicked="#contarTotaisCartoes" prefWidth="85.0" style="-fx-border-color: black;" text="0" />
+                                    <TextField fx:id="descontarDebitoHoje" alignment="CENTER" onMouseClicked="#contarTotaisCartoes" prefWidth="85.0" style="-fx-border-color: black;" text="0" />
+                                    <Text fill="GREEN" onMouseClicked="#procurarDescontarHoje" strokeType="OUTSIDE" strokeWidth="0.0" text="+">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <Label layoutX="137.0" text="Credito" />
+                              <Label layoutX="224.0" text="Debito" />
+                           </children>
+                        </AnchorPane>
+                        <Button layoutX="620.0" layoutY="489.0" mnemonicParsing="false" onAction="#mudarParaTabDinheiro" style="-fx-background-color: black;" text="Voltar" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

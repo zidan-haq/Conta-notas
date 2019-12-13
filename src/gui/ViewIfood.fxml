@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewIfoodController">
+   <children>
+      <Label alignment="CENTER" layoutX="200.0" layoutY="256.0" prefHeight="28.0" prefWidth="108.0" style="-fx-border-color: black; -fx-background-color: white;" text="Online" textAlignment="CENTER" />
+      <TextField fx:id="online" layoutX="307.0" layoutY="256.0" onMouseClicked="#contarTotalDoDia" prefHeight="28.0" prefWidth="196.0" style="-fx-border-color: black;" text="0" />
+      <Label alignment="CENTER" layoutX="200.0" layoutY="298.0" prefHeight="28.0" prefWidth="108.0" style="-fx-border-color: black; -fx-background-color: white;" text="Dinheiro" textAlignment="CENTER" />
+      <TextField fx:id="dinheiro" layoutX="307.0" layoutY="298.0" onMouseClicked="#contarTotalDoDia" prefHeight="28.0" prefWidth="196.0" style="-fx-border-color: black;" text="0" />
+      <Label alignment="CENTER" layoutX="200.0" layoutY="341.0" prefHeight="28.0" prefWidth="108.0" style="-fx-border-color: black; -fx-background-color: white;" text="Cartão" textAlignment="CENTER" />
+      <TextField fx:id="cartao" layoutX="307.0" layoutY="341.0" onMouseClicked="#contarTotalDoDia" prefHeight="28.0" prefWidth="196.0" style="-fx-border-color: black;" text="0" />
+      <Label layoutX="265.0" layoutY="173.0" text="Valores Totais">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="315.0" layoutY="63.0" text="Ifood" AnchorPane.topAnchor="63.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <HBox layoutX="286.9619140625" layoutY="479.0">
+         <children>
+            <Label text="Total do dia = " textFill="RED" />
+            <Label fx:id="totalDoDia" text="0.00" textFill="RED" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

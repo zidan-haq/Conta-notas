@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewAjudaController">
+   <children>
+      <Button layoutX="317.0" layoutY="213.0" mnemonicParsing="false" onAction="#manual" style="-fx-background-color: black;" text="Manual" textFill="WHITE" AnchorPane.leftAnchor="317.0" AnchorPane.rightAnchor="317.0" />
+      <Button layoutX="322.0" layoutY="274.0" mnemonicParsing="false" onAction="#sobre" style="-fx-background-color: black;" text="Sobre" textFill="WHITE" AnchorPane.leftAnchor="322.0" AnchorPane.rightAnchor="322.0" />
+      <Button layoutX="297.0" layoutY="332.0" mnemonicParsing="false" onAction="#reportarErro" style="-fx-background-color: black;" text="Reportar erro" textFill="WHITE" AnchorPane.leftAnchor="297.0" AnchorPane.rightAnchor="297.0" />
+   </children>
+</AnchorPane>

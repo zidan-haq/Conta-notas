@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewRelatorioController">
+   <children>
+      <AnchorPane prefHeight="91.0" prefWidth="700.0">
+         <children>
+            <Button layoutX="13.0" layoutY="34.0" mnemonicParsing="false" onAction="#gerarRelatorio" style="-fx-background-color: black;" text="Gerar Relatório" textFill="WHITE" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="40.0" />
+            <Label layoutX="315.0" layoutY="45.0" text="Data do caixa em edição: " AnchorPane.topAnchor="45.0" />
+            <DatePicker fx:id="datePicker" editable="false" layoutX="463.0" layoutY="34.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="40.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="436.0" prefWidth="700.0">
+         <children>
+            <Label layoutX="15.0" layoutY="22.0" text="Quantidade em caixa:" />
+            <TextArea fx:id="quantidadeEmCaixa" layoutX="14.0" layoutY="38.0" prefHeight="350.0" prefWidth="300.0" style="-fx-background-color: black;" />
+            <Label layoutX="387.0" layoutY="22.0" text="Total do dia:" />
+            <TextArea fx:id="totalDoDia" layoutX="386.0" layoutY="38.0" prefHeight="350.0" prefWidth="300.0" style="-fx-background-color: black;" />
+            <RadioButton fx:id="imprimirTotalDoDia" layoutX="386.0" layoutY="395.0" mnemonicParsing="false" text="Imprimir total do dia" />
+            <Separator layoutX="349.0" layoutY="38.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="49.0" prefWidth="700.0">
+         <children>
+            <Button layoutY="8.0" mnemonicParsing="false" onAction="#editarCaixarAnterior" style="-fx-background-color: black;" text="Editar Caixa Anterior" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+            <HBox layoutX="426.0" layoutY="8.0" spacing="15.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#limparTudo" style="-fx-background-color: black;" text="Limpar tudo" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#imprimir" style="-fx-background-color: black;" text="Imprimir" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#salvar" style="-fx-background-color: black;" text="Salvar" textFill="WHITE" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
