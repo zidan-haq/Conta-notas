@@ -15,8 +15,8 @@
   
 <p>**xxxxx** - deve ser substituido pelo local onde a pasta 'Conta Notas' se encontra em seu computador, ex: /home/usuario/Área de trabalho.</p>
   
-<p>**Atenção!</p>
-<p>A / (barra) é usada em sistemas operacionais baseados em Unix, se você utiliza Windows use a \ (barra invertida) no código acima.**</p>
+<p>Atenção!</p>
+<p>A / (barra) é usada em sistemas operacionais baseados em Unix, se você utiliza Windows use a \ (barra invertida) no código acima.</p>
   
  # Detalhes
 <p>Este programa foi desenvolvido com JavaFX 11.0.2 e com openjdk 11.0.5</p>
