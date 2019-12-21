@@ -139,7 +139,7 @@ public class ViewPrincipalController implements Initializable {
 	}
 	
 	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+	public void initialize(URL arg0, ResourceBundle arg1) {		
 		hbox.setBackground(new Background(new BackgroundImage(gerarImage("background.jpg"), null, null, null, null)));
 		
 		selecionarPane(null);
@@ -150,7 +150,5 @@ public class ViewPrincipalController implements Initializable {
 		ajuda.setImage(gerarImage("ajuda.png"));
 		configuracao.setImage(gerarImage("configuracao.png"));
 		sair.setImage(gerarImage("sair.png"));
-
 	}
- 
 }

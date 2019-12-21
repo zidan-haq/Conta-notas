@@ -20,6 +20,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 public class Configuracoes {
+	public static boolean sairDepoisDeSalvar = false;
 
 	boolean programaSalvo = false; // define se o programa já foi salvo depois de ser editado
 
@@ -54,8 +55,10 @@ public class Configuracoes {
 		} catch (IOException e) {
 			Alerts.showAlert("Erro inesperado", "IOException error", e.getMessage(), Alert.AlertType.INFORMATION);
 		} catch (NumberFormatException e) {
-			Alerts.showAlert("NumberFormatException", "Erro ao tentar converter número",
-					"O arquivo de configurações pode estar corrompido.", Alert.AlertType.ERROR);
+			if(!sairDepoisDeSalvar) {
+				Alerts.showAlert("NumberFormatException", "Erro ao tentar converter número",
+						"O arquivo de configurações pode estar corrompido.", Alert.AlertType.ERROR);
+			}
 		}
 	}
 
@@ -115,9 +118,18 @@ public class Configuracoes {
 	public boolean atualizarEVerificarConfiguracao() {
 		// atualiza configuracoes
 		try (BufferedReader br = new BufferedReader(new FileReader("conf.txt"))) {
-			localDoPrograma = br.readLine();
-			quantidadeDeCaixasSalvos = Integer.parseInt(br.readLine());
-			selecionarImpressora = br.readLine();
+			String auxiliar = br.readLine();
+			if(auxiliar != null) {
+				localDoPrograma = auxiliar;
+				try {
+					quantidadeDeCaixasSalvos = Integer.parseInt(br.readLine());
+				} catch(NumberFormatException e){
+					quantidadeDeCaixasSalvos = 2;
+				}	
+				selecionarImpressora = br.readLine();
+			} else {
+				localDoPrograma = null;
+			}
 		} catch (IOException e) {
 			Alerts.showAlert("Erro inesperado", "IOException error", e.getMessage(), Alert.AlertType.INFORMATION);
 		}
@@ -125,7 +137,7 @@ public class Configuracoes {
 		if (localDoPrograma == null || localDoPrograma.replace(" ", "").length() < 2
 				|| localDoPrograma.isEmpty() || quantidadeDeCaixasSalvos == null) {
 			Alerts.showAlert("Alerta", "Programa não configurado",
-					"Para configurar, acesse na \nguia 'Arquivo' a opção 'Configurações'", Alert.AlertType.ERROR);
+					"Para configurar, acesse a guia 'Configurações'", Alert.AlertType.ERROR);
 			return false;
 		}
 		return true;

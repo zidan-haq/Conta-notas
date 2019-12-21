@@ -41,6 +41,9 @@ public class ViewConfController implements Initializable {
 	@FXML
 	public void onBtSalvarAction(Event evento) {
 		conf.salvarConfiguracao(localDoPrograma, quantidadeDeCaixasSalvos, selecionarImpressora);
+		if(Configuracoes.sairDepoisDeSalvar) {
+			System.exit(0);
+		}
 	}
 
 	@FXML
@@ -48,6 +51,9 @@ public class ViewConfController implements Initializable {
 		localDoProgramaAtual();
 		carregarOpcoesQuantidadeDeCaixasSalvos();
 		carregarListaDeImpressoras();
+		if(Configuracoes.sairDepoisDeSalvar) {
+			System.exit(0);
+		}
 	}
 
 //----------------

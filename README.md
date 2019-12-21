@@ -17,7 +17,9 @@
   
 <p>Atenção!</p>
 <p>A / (barra) é usada em sistemas operacionais baseados em Unix, se você utiliza Windows use a \ (barra invertida) no código acima.</p>
-  
+ 
+<p>Ao abrir o programa pela primeira vez, você será redirecionado para a guia configurações. O campo 'local onde o programa' está instalado é impressindível para o correto funcionamento da aplicação</p>
+ 
  # Detalhes
 <p>Este programa foi desenvolvido com JavaFX 11.0.2 e com openjdk 11.0.5</p>
 <p>Ele foi planejado para funcionar em ambientes Windows e Linux.</p>
