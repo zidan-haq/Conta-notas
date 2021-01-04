@@ -228,28 +228,27 @@ public class Relatorio {
 	private void apagarArqAntigos(String local) {		
 		List<File> arquivos = Arrays.asList(new File(local).listFiles());
 		
+		ordenarArquivosPorNome(arquivos);
+		
 		//essa parte do código exclui os dias 30 e 31 quando não satisfazem mais a quantidade de caixas que devem ser mantidos salvos
 		arquivos.forEach(x -> {
-			if (conf.getQuantidadeDeCaixasSalvos() == 2 && cal.get(Calendar.DAY_OF_MONTH) >= 2) {
-				if(Integer.parseInt(x.getName().substring(0, 2)) >= 30) {
-					x.delete();
-				}
-			} else if (conf.getQuantidadeDeCaixasSalvos() == 3 && cal.get(Calendar.DAY_OF_MONTH) >= 3) {
-				if(Integer.parseInt(x.getName().substring(0, 2)) >= 30) {
-					x.delete();
-				}
-			} else if (conf.getQuantidadeDeCaixasSalvos() == 7 && cal.get(Calendar.DAY_OF_MONTH)>= 7) {
-				if(Integer.parseInt(x.getName().substring(0, 2)) >= 30) {
-					x.delete();
-				}
+			if (conf.getQuantidadeDeCaixasSalvos() == 2 && arquivos.indexOf(x) > 1) {
+				x.delete();
+			} else if (conf.getQuantidadeDeCaixasSalvos() == 3 && arquivos.indexOf(x) > 2) {
+				x.delete();
+			} else if (conf.getQuantidadeDeCaixasSalvos() == 7 && arquivos.indexOf(x) > 6) {
+				x.delete();
 			}
 		});
-		
-		//essa parte do código trata dos outros dias da semana que não abarcados pelo código acima
-		arquivos.forEach(arquivo -> {
-			if (Integer.parseInt(arquivo.getName().substring(0,	2)) <= cal.get(Calendar.DAY_OF_MONTH) - conf.getQuantidadeDeCaixasSalvos()) {
-				arquivo.delete();
-			}
+	}
+	
+	private void ordenarArquivosPorNome(List<File> arquivos) {
+		arquivos.sort((a1, a2) -> {
+			String[] tupla = a1.getName().replaceAll(".txt", "").split("-");
+			Integer a1Inteiro = Integer.parseInt(tupla[2] + tupla[1] + tupla[0]);
+			tupla = a2.getName().replaceAll(".txt", "").split("-");
+			Integer a2Inteiro = Integer.parseInt(tupla[2] + tupla[1] + tupla[0]);
+			return a1Inteiro.compareTo(a2Inteiro);
 		});
 	}
 	
